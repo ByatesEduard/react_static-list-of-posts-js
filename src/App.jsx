@@ -4,7 +4,7 @@ import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 
 import './App.scss';
-import PostList from './components/PostList';
+import { PostList } from './components/PostList';
 
 const preparedPosts = postsFromServer.map(post => ({
   ...post,
