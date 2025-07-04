@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const UserInfo = ({ user }) => {
+const UserInfo = ({ user }) => {
   return (
     <a className="UserInfo" href={`mailto:${user.email}`}>
       {user.name}

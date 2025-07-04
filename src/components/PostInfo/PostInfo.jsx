@@ -1,6 +1,6 @@
 import React from 'react';
-import { CommentList } from '../CommentList/CommentList';
-import { UserInfo } from '../UserInfo/UserInfo';
+import CommentList from '../CommentList/CommentList';
+import UserInfo from '../UserInfo/UserInfo';
 
 const PostInfo = ({ post }) => {
   return (

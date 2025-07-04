@@ -1,6 +1,7 @@
 import React from 'react';
+import PostInfo from '../PostInfo/PostInfo';
 
-export const PostInfo = ({ posts }) => {
+const PostList = ({ posts }) => {
   return (
     <div className="PostList">
       {posts.map(post => (
@@ -10,4 +11,4 @@ export const PostInfo = ({ posts }) => {
   );
 };
 
-export default PostInfo;
+export default PostList;
