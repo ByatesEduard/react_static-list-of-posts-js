@@ -1,7 +1,7 @@
 import React from 'react';
-import PostInfo from '../PostInfo/PostInfo';
+import { PostInfo } from '../PostInfo/PostInfo';
 
-const PostList = ({ posts }) => {
+export const PostList = ({ posts }) => {
   return (
     <div className="PostList">
       {posts.map(post => (
