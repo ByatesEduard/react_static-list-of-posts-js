@@ -1,15 +1,28 @@
 import React from 'react';
-import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
+import { UserInfo } from '../UserInfo/UserInfo';
 
-export const PostInfo = ({ post }) => {
+const PostInfo = ({ post }) => {
   return (
-    <div className="Post">
-      <h2 className="Post__title">{post.title}</h2>
-      <p className="Post__body">{post.body}</p>
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{post.title}</h3>
 
-      <UserInfo user={post.user} />
-      <CommentList comments={post.comments} />
+        <p>
+          {' Posted by '}
+          <UserInfo user={post.user} />
+        </p>
+      </div>
+
+      <p className="PostInfo__body">{post.body}</p>
+
+      <hr />
+
+      {post.comments.length > 0 ? (
+        <CommentList comments={post.comments} />
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      )}
     </div>
   );
 };
